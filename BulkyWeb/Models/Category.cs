@@ -8,7 +8,7 @@ namespace BulkyWeb.Models
 
         //using dataAnnotation to make Id as primary key
         [Key]
-        public int Id { get; set; }
+        public int Id { get; set; }   
         [Required]
         public string Name { get; set; }
         public int DisplayOrder { get; set; }
