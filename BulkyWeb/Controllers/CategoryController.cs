@@ -26,13 +26,7 @@ namespace BulkyWeb.Controllers
         [HttpPost]
         public IActionResult Create(Category obj)
         {
-            //Costume validation
-            /*if (obj.Name == obj.DisplayOrder.ToString() )
-            {
-                ModelState.AddModelError("Name", "The DisplayOrder cannot exactly match the Name");
-                // Clear model state to prevent model binding
-                ModelState.Clear();
-             }*/
+          
             if (ModelState.IsValid)
             {
                
