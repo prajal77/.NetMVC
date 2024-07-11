@@ -20,12 +20,14 @@ namespace Bulky.DataAccess.Repository
         {
             _db = db;
             this.dbSet =_db.Set<T>();
+            //_db.Categories == dbSet
         }
         public void Add(T entity)
         {
             dbSet.Add(entity); 
         }
 
+        //get by id
         public T Get(Expression<Func<T, bool>> filter)
         {
             IQueryable<T> query = dbSet;
