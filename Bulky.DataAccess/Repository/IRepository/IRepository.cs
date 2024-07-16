@@ -11,9 +11,9 @@ namespace Bulky.DataAccess.Repository.IRepository
     {
          //T- Category
          //Get all Category
-         IEnumerable<T> GetAll();
+         IEnumerable<T> GetAll(string? includeProperties = null);
         //Get Category by id
-        T Get(Expression<Func<T,bool>> filter );
+        T Get(Expression<Func<T,bool>> filter, string? includeProperties = null);
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entity);
