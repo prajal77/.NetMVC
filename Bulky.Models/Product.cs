@@ -43,13 +43,14 @@ namespace Bulky.Models
         public double Price100 { get; set; }
 
         [ValidateNever]
+        [Display(Name = "Category")]
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
         [ValidateNever]
         public Category Category { get; set; }
          
         [ValidateNever]
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
     }
 }
