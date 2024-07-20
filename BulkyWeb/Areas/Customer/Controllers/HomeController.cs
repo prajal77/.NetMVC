@@ -13,8 +13,7 @@ namespace BulkyWeb.Areas.Customer.Controllers
 
         public HomeController(ILogger<HomeController> logger,IUnitOfWork unitOfWork)
         {
-            _logger = logger;
-
+            _logger = logger; 
             _unitOfWork = unitOfWork;
         }
 
