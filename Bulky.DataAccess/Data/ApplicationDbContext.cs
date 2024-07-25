@@ -15,6 +15,8 @@ namespace Bulky.DataAccess.Data
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Company> Companies { get; set; }
+
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         // Seed entity onto the database
@@ -37,6 +39,28 @@ namespace Bulky.DataAccess.Data
                       Id = 3,
                       Name = "History",
                       DisplayOrder = 3
+                  }
+                );
+            modelBuilder.Entity<Company>().HasData(
+                new Company
+                {
+                    Id = 1,
+                    Name="Tech Solution",
+                    StreetAddress="123 Tech St",
+                    City="Tech City",
+                    PostalCode="12121",
+                    State="IL",
+                    PhoneNumber="666669000"
+                },
+                  new Company
+                  {
+                      Id = 2,
+                      Name = "Vivid Books",
+                      StreetAddress = "999 Vid St",
+                      City = "Vid City",
+                      PostalCode = "6666",
+                      State = "IL",
+                      PhoneNumber = "779669000"
                   }
                 );
             modelBuilder.Entity<Product>().HasData(
@@ -131,6 +155,7 @@ namespace Bulky.DataAccess.Data
 
                 }
                 );
+
         }
     }
 }
